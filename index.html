@@ -67,10 +67,17 @@
     Make them display as inline block, instead of block.
     This will make them render on the same line. */
 
-      #headerTop > div,
-      #headerBottom > div,
-      .email > div {
-        display: inline-block;
+      #headerTop,
+      #headerBottom,
+      .email {
+        display: flex;
+      }
+      #headerBottom {
+        align-items: baseline;
+      }
+      #headerTop {
+        align-items: baseline;
+        justify-content: space-between;
       }
 
       /* 👉 Task 5- Target the spans that are nested inside the id headerTop.
